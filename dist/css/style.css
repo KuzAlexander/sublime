@@ -1679,7 +1679,7 @@ p {
   }
 
   .footer__right {
-    background: url(../../images/footer.png) center right no-repeat;
+    background: url(../images/footer.png) center right no-repeat;
   }
 
   .footer__caption {
