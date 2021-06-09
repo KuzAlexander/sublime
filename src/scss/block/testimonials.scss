@@ -1,0 +1,64 @@
+.testimonials {
+
+		&__wrap {
+            background-color: $black;
+            padding: 65px 65px 130px;
+		}
+
+		&__title {
+            @include title (0px, 100px, $white)
+		}
+
+		&__content {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+		}
+
+		&__info {
+            flex-basis: 54%;
+            padding: 20px 0;
+		}
+
+		&__caption {
+            font-size: 18px;
+            font-family: "MyriadPro-Cond";
+            font-weight: 400;
+            letter-spacing: 1px;
+            color: $white;
+		}
+
+		&__subtitle {
+            margin-top: 20px;
+            font-size: 16px;
+            color: $white;
+		}
+
+		&__img {
+            width: 125px;
+            height: 125px;
+            border: 3px solid $yellow;
+            border-radius: 50%;
+            overflow: hidden;
+            img {
+                display: block;
+                max-width: 100%;
+                margin: 0 auto;
+            }
+		}
+
+		&__text {
+            margin-top: 20px;
+            color: $white;
+            text-align: center;
+            font-size: 16px;
+            font-weight: 700;
+            span {
+                font-size: 18px;
+                font-weight: 400;
+                display: block;
+            }
+		}
+}
+

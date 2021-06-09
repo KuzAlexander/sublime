@@ -1,0 +1,60 @@
+@mixin min-max ($min, $max, $padding){
+    min-width: $min;
+    max-width: $max;
+    margin: 0 auto;
+    padding: 0 $padding;
+    box-sizing: border-box;
+}
+
+@mixin font($font_name, $file_name, $weight, $style) {
+    @font-face {
+        font-family: $font_name;
+        font-display: swap;
+        src: url("../fonts/#{$file_name}.woff") format("woff"), url("../fonts/#{$file_name}.woff2") format("woff2");
+        font-weight: #{$weight};
+        font-style: #{$style};
+    }
+}
+
+@mixin title($padding-left, $width, $color) {
+    display: inline-block;
+    padding: 0 20px 0 $padding-left;
+    font-size: 50px;
+    font-weight: 400;
+    color: $color;
+    letter-spacing: -1px;
+    &::first-letter {
+        color: $yellow;
+    }
+    position: relative; 
+    &::after {
+        content: '';
+        display: block;
+        background-color: #c5c5c5;
+        width: $width;
+        height: 1px;
+        position: absolute;
+        bottom: -5px;
+        right: 20px;
+    }  
+}
+
+@mixin font-size($min-size, $max-size, $min-maket, $max-maket){
+
+    @media (min-width: #{$max-maket + 'px'}){
+        font-size: 111px;
+    }
+
+    @media (max-width: #{$max-maket + 'px'}){
+        $delta: $max-size - $min-size;
+        font-size: calc(#{$min-size + 'px'} + #{$delta} * (100vw / #{$max-maket}));
+    }
+    
+    @media (max-width: 767px){
+        $mob-delta: ($max-size - $min-size) + ($max-size - $min-size) * 0.7;
+        $fs: calc(#{$min-size + 'px'}  + #{$mob-delta} * ((100vw - #{$min-maket + 'px'}) / #{$max-maket}));
+        font-size: $fs;
+        line-height: $fs;
+    }
+}
+

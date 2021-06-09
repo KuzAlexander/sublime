@@ -1,0 +1,59 @@
+.team {
+		&__wrap {
+            background-color: $white;
+            padding: 85px 65px 150px;
+            display: flex;
+            justify-content: space-between;
+		}
+
+		&__title {
+                  align-self: flex-start;
+                  @include title(0px, 100px, $black);
+		}
+
+		&__block {
+            flex-basis: 73%;
+    
+		}
+
+		&__caption {
+            font-size: 16px;
+            font-family: "MyriadPro-Cond";
+            font-weight: 700;
+		}
+
+		&__subtitle {
+            margin-top: 25px;
+		}
+        &__content {
+            display: flex;
+            justify-content: space-between;  
+            flex-wrap: wrap;
+            margin: 0 -9px;             
+        }
+		&__info {
+            flex: 0 0 180px;      
+            margin-top: 35px;
+            padding: 0 9px;
+		}
+
+		&__img {
+            img {
+                display: block;
+                max-width: 100%;
+                margin: 0 auto;
+            }
+		}
+
+		&__text {
+            margin-top: 18px;
+            text-align: center;
+            font-size: 16px;
+            font-weight: 700;
+            span {
+                display: block;
+                font-weight: 400;
+            }
+		}
+}
+

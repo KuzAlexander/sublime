@@ -1,0 +1,19 @@
+body {
+    font-family:'MyriadPro';
+    font-size: 16px;
+}
+.container {
+    @include min-max (320px, 1400px, 0);
+}
+
+main {
+    background-color: #151515;
+}
+
+.wrap {
+    @include min-max (320px, 1200px, 0);
+}
+
+p {
+    color: $black;
+}

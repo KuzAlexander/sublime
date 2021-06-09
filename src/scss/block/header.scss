@@ -1,0 +1,72 @@
+.header {
+      background:url(../images/header-bg.jpg) top center no-repeat;
+      background-size: contain;
+      position: relative;
+      &::before {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: linear-gradient(rgba(23, 35, 42, 0.8), rgba(0, 14, 22, 1));
+      }      
+      &__wrap {
+            position: relative;
+      }
+      &__top {
+            padding: 100px 0px 65px 0px;
+      }
+
+      &__logo {
+            font-size: 202px;
+            letter-spacing: -10px;
+            line-height: 154px;
+            color: $white;
+            font-weight: 700;
+            padding: 0 25px;
+            span {
+                  color: $yellow;
+            }
+      }
+
+      &__text {
+            font-size: 18px;
+            color: $white;
+            margin-top: 20px;
+            padding: 0 42px;
+            &::first-letter{
+                  color: $yellow;
+            }
+      }
+
+      &__downl {
+            margin-top: 33px;
+            padding: 0 42px;
+            font-size: 18px;
+            color: $yellow;
+      }
+
+      &__bottom {
+            padding: 65px 40px;
+            height: 654px;
+            background: url(../images/headerImg.jpg) center center no-repeat;
+            box-sizing: border-box;
+      }
+
+      &__title {
+            font-size: 60px;
+            letter-spacing: -3px;
+            line-height: 48px;
+            color: $white;
+            font-weight: bold;
+            span{
+                  color: $yellow;
+            }
+      }
+
+      &__menu {
+            margin-top: 45px;
+      }
+}

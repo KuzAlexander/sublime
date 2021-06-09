@@ -1,0 +1,139 @@
+.contact {
+		&__wrap {
+            display: flex;
+            justify-content: space-between;
+		}
+
+		&__map {
+            flex-basis: 41%;
+            flex-shrink: 0;
+            .gmnoprint,.gm-style-cc{
+                display: none;
+            }
+            display: flex;
+            justify-content: center;
+            align-items: center;
+		}
+
+		// &__logo {
+        //     width: 57px;
+        //     height: 57px;
+        //     background-color: $black;
+        //     border: 1px solid $yellow;
+        //     border-radius: 50%;
+        //     display: flex;
+        //     justify-content: center;
+        //     align-items: center;            
+        //     p {
+        //         font-size: 14px;
+        //         font-weight: 700;
+        //         color: $white;
+        //         &::first-letter {
+        //             color: $yellow;
+        //         }
+        //     }
+		// }
+
+		&__info {
+            flex: 1 1 auto;
+            background-color: #2046b3;
+            padding: 50px 210px 35px 75px;
+		}
+
+		&__title {
+            @include title(20px, 120px, $white)
+		}
+
+		&__form {
+            margin-top: 25px;          
+            input, textarea {
+                display: block;
+                box-sizing: border-box;
+            }
+		}
+
+		&__name {
+            width: 100%;
+            padding: 10px 10px 10px 15px;
+            border: 2px solid $white;
+            background-color: #2046b3;
+            font-size: 16px;
+            font-weight: 700;
+            color: $white;               
+            &::placeholder {
+                font-family: "MyriadPro";
+                font-size: 16px;
+                font-weight: 700;
+                color: $white;   
+            }
+		}
+        &__container {
+            margin-top: 15px;
+            display: flex;
+            justify-content: space-between;
+        }
+		&__tel {
+            flex-basis: 45%;
+            @extend .contact__name;
+		}
+
+		&__email {
+            flex-basis: 45%;
+            @extend .contact__name;
+		}
+
+        &__area {
+            margin-top: 15px;
+            height: 75px;
+            font-family: "MyriadPro";
+            font-size: 18px;
+            @extend .contact__name;
+        }
+
+        &__btn {
+            margin-top: 20px;
+            padding: 10px 30px;
+            background-color: $yellow;
+            font-size: 16px;
+            font-weight: 700;
+            text-transform: uppercase;
+            border: none;
+        } 
+        &__text {
+            margin: 60px 0 0 20px;
+            p {
+                font-size: 16px;
+                color: $white;
+                font-weight: 700;
+            }
+            span, a {
+                display: inline-block;
+                margin-left: 20px;
+                font-size: 12px;
+                font-weight: 400;
+
+            }
+        }
+		&__adress {
+            margin-top: 35px;
+		}
+
+		&__phone {
+            margin-top: 25px;
+            span {
+                margin-left: 31px;
+            }
+		}
+
+		&__mail {
+            margin-top: 18px;
+            a {
+                margin-left: 40px;
+                text-decoration: none;
+                color: $white;
+            }
+		}
+        &__icons {
+            margin-top: 60px;
+        }     
+}
